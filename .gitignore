@@ -1,0 +1,23 @@
+# pycharm
+.idea/
+.DS_Store
+
+# Django stuff:
+*.log
+local_settings.py
+*.sqlite3
+
+# Environments
+.env
+.venv/
+
+
+# database migrations
+*/migrations/*.py
+!*/migrations/__init__.py
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
