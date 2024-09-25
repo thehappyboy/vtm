@@ -28,7 +28,7 @@ class User(AbstractUser):
     is_teamleader = models.BooleanField(default=False)
     department = models.CharField(max_length=50, blank=True, null=True, verbose_name='部门')
     section = models.CharField(max_length=50, blank=True, null=True, verbose_name='科室')
-    age = models.PositiveSmallIntegerField(verbose_name='年龄')
+    age = models.PositiveSmallIntegerField(verbose_name='年龄', default=20)
     phone = models.CharField(max_length=30, null=True, blank=True)
     # picture = models.ImageField(upload_to='profile_pictures/%y/%m/%d/', default='default.png', null=True, blank=True)
 
