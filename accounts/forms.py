@@ -5,12 +5,16 @@ from accounts.models import User
 class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = User
+        fields = UserCreationForm.Meta.fields + ('email',)
 
 
 
 class CustomUserChangeForm(UserChangeForm):
-    pass
+    class Meta(UserChangeForm.Meta):
+        model = User
+        fields = "__all__"
 
 
 class AdminCustomUserCreationForm(AdminUserCreationForm):
-    pass
+    class Meta(AdminUserCreationForm.Meta):
+        model = User
